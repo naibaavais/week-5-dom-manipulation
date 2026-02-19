@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recent Journal Articles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <p>MyBlog.com</p>
+</header>
+
+<main>
+
+<div id="showArea">
+
+    <div id="toggleButtons">
+        <button onclick="showFilter()" type="button">Filter Articles</button>
+        <button onclick="showAddNew()" type="button">Add New Article</button>
+    </div>
+
+    <!-- FILTER FORM (VISIBLE BY DEFAULT) -->
+    <form id="filterContent">
+        <h2>Filter by Article Type</h2>
+        Opinion <input onclick="filterArticles()" id="opinionCheckbox" type="checkbox" checked>
+        Recipe <input onclick="filterArticles()" id="recipeCheckbox" type="checkbox" checked>
+        Update <input onclick="filterArticles()" id="updateCheckbox" type="checkbox" checked>
+    </form>
+
+    <!-- ADD FORM (HIDDEN BY DEFAULT) -->
+    <form id="newContent">
+        <h2>Add New Article</h2>
+
+        <div class="formRow">
+            <label>Title:</label>
+            <input id="inputHeader" type="text">
+        </div>
+
+        <div class="formRow">
+            <label>Type:</label>
+            <input name="articleType" id="opinionRadio" type="radio"> Opinion
+            <input name="articleType" id="recipeRadio" type="radio"> Recipe
+            <input name="articleType" id="lifeRadio" type="radio"> Life Update
+        </div>
+
+        <div class="formRow">
+            <label>Text:</label>
+            <textarea id="inputArticle"></textarea>
+        </div>
+
+        <div class="formRow">
+            <button onclick="addNewArticle()" type="button">Add New Article</button>
+        </div>
+    </form>
+
+</div>
+
+<h1>Recent Journal Articles</h1>
+
+<div id="articleList">
+
+    <article class="opinion">
+        <span class="marker">Opinion</span>
+        <h2>Article 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p><a href="#">Read more...</a></p>
+    </article>
+
+    <article class="recipe">
+        <span class="marker">Recipe</span>
+        <h2>Article 2</h2>
+        <p>Vivamus lectus ante, venenatis sed placerat id.</p>
+        <p><a href="#">Read more...</a></p>
+    </article>
+
+    <article class="update">
+        <span class="marker">Update</span>
+        <h2>Article 3</h2>
+        <p>Proin mi ipsum, egestas in diam nec.</p>
+        <p><a href="#">Read more...</a></p>
+    </article>
+
+</div>
+
+</main>
+
+<footer>
+    <p>Contact Us | (555) 123-1234</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

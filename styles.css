@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: goldenrod;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8rem;
+}
+
+#showArea {
+    width: 75%;
+    margin: 30px auto;
+}
+
+#toggleButtons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#toggleButtons button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+/* IMPORTANT: Add form hidden by default */
+form#newContent {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formRow {
+    margin: 10px 0;
+}
+
+textarea {
+    width: 300px;
+    height: 80px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#articleList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article {
+    width: 28%;
+    margin: 1%;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: justify;
+}
+
+article.opinion {
+    border: 2px solid red;
+}
+
+article.recipe {
+    border: 2px solid lightskyblue;
+}
+
+article.update {
+    border: 2px solid lightseagreen;
+}
+
+.marker {
+    float: right;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.opinion .marker {
+    background-color: red;
+}
+
+.recipe .marker {
+    background-color: lightskyblue;
+}
+
+.update .marker {
+    background-color: lightseagreen;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    article {
+        width: 80%;
+    }
+}
+
